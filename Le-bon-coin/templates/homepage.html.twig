@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage !{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }} // on insère les scripts défini dans le template base.html.twig (le parent de notre template cf extends en haut)
+
+    //ci dessous on défini notre nouveau script
+    //on oublie pas d'utiliser assets si c'est un script local
+
+    <script src="{{asset('javascript/bousin3000.js')}}"> </script>
+{% endblock%}
